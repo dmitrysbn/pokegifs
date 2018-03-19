@@ -36,7 +36,7 @@ class PokemonController < ApplicationController
     pokemons = []
 
     6.times do
-      random_number = 800
+      random_number = rand(800) + 1
 
       pokemon = HTTParty.get("http://pokeapi.co/api/v2/pokemon/#{random_number}/")
       pokemon_body = JSON.parse(pokemon.body)
