@@ -15,9 +15,9 @@ class PokemonController < ApplicationController
     respond_to do |format|
       format.json do
         render json: {
-          name: "#{name}",
-          id: "#{id}",
-          types: "#{types}"
+          name: name,
+          id: id,
+          types: types
         }
       end
     end
